@@ -97,6 +97,7 @@ class MyTranslation implements Translations {
       "distance": "Distance",
       "within_range": "Within Range",
       "zone_radius": "Zone Radius",
+      "you_can_check_in_now": "You can check in now",
       "current_coordinates": "Current Coordinates",
       "latitude": "Latitude",
       "longitude": "Longitude",
