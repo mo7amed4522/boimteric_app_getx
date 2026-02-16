@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OptiSpa Privacy Policy - Learn how we protect your data and privacy">
+    <title>Privacy Policy | OptiSpa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --accent: #06b6d4;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --text-muted: #94a3b8;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #f1f5f9;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --radius: 12px;
+            --radius-lg: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 4rem 1.5rem 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .logo-text {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: -0.02em;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .header p {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .last-updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            color: white;
+            margin-top: 1.5rem;
+        }
+
+        /* Main Content */
+        .main {
+            max-width: 800px;
+            margin: -3rem auto 4rem;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content-card {
+            background: var(--bg-primary);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: 3rem;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--bg-secondary);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .toc-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .toc-list a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .toc-list a:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        .toc-list a::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .section p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Data Types Grid */
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .data-item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+            transition: all 0.2s;
+        }
+
+        .data-item:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+
+        .data-item-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .data-item h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .data-item p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* Lists */
+        .feature-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-box-title {
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-box p {
+            color: var(--text-secondary);
+            margin: 0;
+            font-size: 0.9375rem;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border-left: 4px solid #f59e0b;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .warning-box-title {
+            font-weight: 600;
+            color: #b45309;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Contact */
+        .contact-section {
+            background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+            border-radius: var(--radius);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+
+        .contact-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            color: var(--primary);
+            padding: 0.875rem 1.5rem;
+            border-radius: 100px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            transition: all 0.2s;
+        }
+
+        .contact-email:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .header {
+                padding: 3rem 1rem 5rem;
+            }
+
+            .header h1 {
+                font-size: 1.875rem;
+            }
+
+            .main {
+                margin-top: -2rem;
+                padding: 0 1rem;
+            }
+
+            .content-card {
+                padding: 1.5rem;
+            }
+
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+
+            .data-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.25rem;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Print styles */
+        @media print {
+            .header {
+                background: white;
+                color: black;
+                padding: 2rem 1rem;
+            }
+
+            .header h1,
+            .header p,
+            .logo-text {
+                color: black;
+            }
+
+            .content-card {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">📍</div>
+                <span class="logo-text">OptiSpa</span>
+            </div>
+            <h1>Privacy Policy</h1>
+            <p>Your privacy is our priority. Learn how we collect, use, and protect your personal information when you use our attendance tracking application.</p>
+            <div class="last-updated">
+                <span>📅</span>
+                <span>Last Updated: February 16, 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="content-card">
+            <!-- Table of Contents -->
+            <nav class="toc">
+                <div class="toc-title">Quick Navigation</div>
+                <ul class="toc-list">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#data-collection">Data We Collect</a></li>
+                    <li><a href="#how-we-use">How We Use Data</a></li>
+                    <li><a href="#data-storage">Data Storage</a></li>
+                    <li><a href="#data-sharing">Data Sharing</a></li>
+                    <li><a href="#your-rights">Your Rights</a></li>
+                    <li><a href="#security">Security</a></li>
+                    <li><a href="#children">Children's Privacy</a></li>
+                    <li><a href="#changes">Policy Changes</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Introduction -->
+            <section class="section" id="introduction">
+                <h2 class="section-title">
+                    <span class="section-icon">👋</span>
+                    Introduction
+                </h2>
+                <p>Welcome to OptiSpa ("we," "our," or "us"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile attendance tracking application (the "App").</p>
+                <p>We are committed to protecting your privacy and ensuring transparency about our data practices. By using OptiSpa, you agree to the collection and use of information in accordance with this policy.</p>
+                <div class="info-box">
+                    <div class="info-box-title">🔒 Our Commitment</div>
+                    <p>We do not sell your personal data to third parties. We only collect information necessary to provide our attendance tracking services.</p>
+                </div>
+            </section>
+
+            <!-- Data Collection -->
+            <section class="section" id="data-collection">
+                <h2 class="section-title">
+                    <span class="section-icon">📊</span>
+                    Information We Collect
+                </h2>
+                <p>We collect several types of information to provide and improve our services:</p>
+                
+                <div class="data-grid">
+                    <div class="data-item">
+                        <div class="data-item-icon">📍</div>
+                        <h4>Location Data</h4>
+                        <p>GPS coordinates, geofencing data for workplace verification</p>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-item-icon">🔐</div>
+                        <h4>Biometric Data</h4>
+                        <p>Fingerprint/Face ID authentication (device-only, not stored)</p>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-item-icon">👤</div>
+                        <h4>Account Information</h4>
+                        <p>Name, employee ID, email, profile details</p>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-item-icon">📱</div>
+                        <h4>Device Information</h4>
+                        <p>Device type, OS version, app version</p>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-item-icon">⏰</div>
+                        <h4>Attendance Records</h4>
+                        <p>Clock-in/out times, location history, work hours</p>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-item-icon">⚙️</div>
+                        <h4>App Preferences</h4>
+                        <p>Theme settings, language preferences</p>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <div class="warning-box-title">⚠️ Important Note on Biometric Data</div>
+                    <p>Biometric authentication (fingerprint/face recognition) is processed entirely on your device using the operating system's secure hardware. We do not collect, store, or transmit your biometric data to our servers.</p>
+                </div>
+            </section>
+
+            <!-- How We Use Data -->
+            <section class="section" id="how-we-use">
+                <h2 class="section-title">
+                    <span class="section-icon">🎯</span>
+                    How We Use Your Information
+                </h2>
+                <p>We use the collected information for the following purposes:</p>
+                <ul class="feature-list">
+                    <li><strong>Attendance Verification:</strong> To verify your presence at designated workplace locations using GPS and geofencing technology</li>
+                    <li><strong>Secure Authentication:</strong> To verify your identity using device biometrics before recording attendance</li>
+                    <li><strong>Mock Location Detection:</strong> To prevent fraudulent attendance by detecting fake GPS applications</li>
+                    <li><strong>Time Tracking:</strong> To accurately record your work hours and generate attendance reports</li>
+                    <li><strong>App Functionality:</strong> To personalize your experience with theme and language preferences</li>
+                    <li><strong>Security:</strong> To protect against unauthorized access and ensure data integrity</li>
+                    <li><strong>Compliance:</strong> To meet legal and regulatory requirements for workforce management</li>
+                </ul>
+            </section>
+
+            <!-- Data Storage -->
+            <section class="section" id="data-storage">
+                <h2 class="section-title">
+                    <span class="section-icon">💾</span>
+                    Data Storage & Retention
+                </h2>
+                <p>Your data is stored securely using industry-standard practices:</p>
+                <ul class="feature-list">
+                    <li><strong>Local Storage:</strong> App preferences are stored locally on your device using secure storage mechanisms</li>
+                    <li><strong>Server Storage:</strong> Attendance records and account information are stored on secure servers with encryption</li>
+                    <li><strong>Retention Period:</strong> We retain your data as long as your account is active or as required by law</li>
+                    <li><strong>Data Deletion:</strong> You can request deletion of your data by contacting your administrator or our support team</li>
+                </ul>
+                <div class="info-box">
+                    <div class="info-box-title">🔐 Security Measures</div>
+                    <p>All data transmitted between the app and our servers is encrypted using TLS/SSL. We implement strict access controls and regularly audit our security practices.</p>
+                </div>
+            </section>
+
+            <!-- Data Sharing -->
+            <section class="section" id="data-sharing">
+                <h2 class="section-title">
+                    <span class="section-icon">🤝</span>
+                    Data Sharing & Disclosure
+                </h2>
+                <p>We do not sell or rent your personal information. We may share your data only in the following circumstances:</p>
+                <ul class="feature-list">
+                    <li><strong>With Your Employer:</strong> Attendance records are shared with your organization's authorized administrators</li>
+                    <li><strong>Service Providers:</strong> We may use trusted third-party services for hosting and analytics (under strict confidentiality agreements)</li>
+                    <li><strong>Legal Requirements:</strong> We may disclose information if required by law or to protect our rights</li>
+                    <li><strong>Business Transfers:</strong> In case of a merger or acquisition, your data may be transferred with notice</li>
+                </ul>
+            </section>
+
+            <!-- Your Rights -->
+            <section class="section" id="your-rights">
+                <h2 class="section-title">
+                    <span class="section-icon">✅</span>
+                    Your Privacy Rights
+                </h2>
+                <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+                <ul class="feature-list">
+                    <li><strong>Access:</strong> Request a copy of the personal data we hold about you</li>
+                    <li><strong>Correction:</strong> Request correction of inaccurate or incomplete data</li>
+                    <li><strong>Deletion:</strong> Request deletion of your personal data (subject to legal retention requirements)</li>
+                    <li><strong>Restriction:</strong> Request limitation of processing under certain circumstances</li>
+                    <li><strong>Portability:</strong> Request transfer of your data to another service</li>
+                    <li><strong>Objection:</strong> Object to processing based on legitimate interests</li>
+                </ul>
+                <p>To exercise these rights, please contact us using the information provided at the end of this policy.</p>
+            </section>
+
+            <!-- Security -->
+            <section class="section" id="security">
+                <h2 class="section-title">
+                    <span class="section-icon">🛡️</span>
+                    Security Measures
+                </h2>
+                <p>We implement comprehensive security measures to protect your data:</p>
+                <ul class="feature-list">
+                    <li><strong>Encryption:</strong> All data in transit is encrypted using industry-standard TLS protocols</li>
+                    <li><strong>Secure Authentication:</strong> Biometric verification ensures only authorized users can record attendance</li>
+                    <li><strong>Mock Location Prevention:</strong> Advanced algorithms detect and prevent fake GPS usage</li>
+                    <li><strong>Access Controls:</strong> Strict role-based access to administrative functions</li>
+                    <li><strong>Regular Audits:</strong> Continuous monitoring and security assessments</li>
+                    <li><strong>Incident Response:</strong> Established procedures for handling security incidents</li>
+                </ul>
+            </section>
+
+            <!-- Children's Privacy -->
+            <section class="section" id="children">
+                <h2 class="section-title">
+                    <span class="section-icon">👶</span>
+                    Children's Privacy
+                </h2>
+                <p>OptiSpa is designed for workplace attendance tracking and is not intended for use by children under 13 years of age. We do not knowingly collect personal information from children under 13.</p>
+                <p>If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately. If we discover that we have collected personal information from a child under 13, we will promptly delete such information.</p>
+                <div class="warning-box">
+                    <div class="warning-box-title">⚠️ Age Restriction</div>
+                    <p>By using OptiSpa, you confirm that you are at least 13 years old or have obtained parental consent if required by applicable law.</p>
+                </div>
+            </section>
+
+            <!-- Changes -->
+            <section class="section" id="changes">
+                <h2 class="section-title">
+                    <span class="section-icon">📝</span>
+                    Changes to This Policy
+                </h2>
+                <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons. We will notify you of any material changes by:</p>
+                <ul class="feature-list">
+                    <li>Posting the updated policy within the app</li>
+                    <li>Sending a notification to your registered email</li>
+                    <li>Updating the "Last Updated" date at the top of this policy</li>
+                </ul>
+                <p>We encourage you to review this policy periodically. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+            </section>
+
+            <!-- Contact -->
+            <section class="section" id="contact">
+                <h2 class="section-title">
+                    <span class="section-icon">📧</span>
+                    Contact Us
+                </h2>
+                <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+            </section>
+
+            <div class="contact-section">
+                <h3>We're Here to Help</h3>
+                <p>Have questions about your privacy? Reach out to our team.</p>
+                <a href="mailto:me@mohamedshaker.com" class="contact-email">
+                    <span>✉️</span>
+                    <span>me@mohamedshaker.com</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 OptiSpa. All rights reserved.</p>
+        <p>This privacy policy is effective as of February 16, 2026.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,80 @@
+# GitLab CI/CD Configuration for GitLab Pages
+# This pipeline deploys the privacy policy to GitLab Pages
+# 
+# The privacy policy will be available at:
+# https://mo7amed24.gitlab.io/boimteric_app_getx
+#
+# For Google Play Store, use this URL in your Store Listing under Privacy Policy
+
+stages:
+  - deploy
+
+variables:
+  # Disable shallow cloning to ensure full git history if needed
+  GIT_DEPTH: 0
+
+# Deploy to GitLab Pages
+pages:
+  stage: deploy
+  image: alpine:latest
+  
+  before_script:
+    - apk add --no-cache rsync
+  
+  script:
+    # Create public directory for GitLab Pages
+    - mkdir -p public
+    
+    # Copy privacy policy files to public directory
+    - rsync -av privacy-policy/ public/
+    
+    # Verify the files are in place
+    - echo "Files deployed to GitLab Pages:"
+    - ls -la public/
+  
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 week
+  
+  # Only run on the main/master branch or when explicitly triggered
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_BRANCH == "gh-pages"
+    - if: $CI_PIPELINE_SOURCE == "web"
+  
+  # Environment configuration
+  environment:
+    name: production
+    url: https://mo7amed24.gitlab.io/boimteric_app_getx
+
+# Optional: Validate HTML before deployment
+validate:
+  stage: deploy
+  image: alpine:latest
+  
+  before_script:
+    - apk add --no-cache curl
+  
+  script:
+    - echo "Validating HTML files..."
+    - |
+      for file in privacy-policy/*.html; do
+        if [ -f "$file" ]; then
+          echo "Checking $file..."
+          # Basic HTML validation - check for closing tags
+          if grep -q "</html>" "$file" && grep -q "</body>" "$file"; then
+            echo "✓ $file appears valid"
+          else
+            echo "✗ $file may be missing closing tags"
+            exit 1
+          fi
+        fi
+      done
+    - echo "HTML validation complete"
+  
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_BRANCH == "gh-pages"
+  allow_failure: true
