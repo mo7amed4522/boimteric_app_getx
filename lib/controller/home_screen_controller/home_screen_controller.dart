@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_final_fields, unused_field, strict_top_level_inference
 
 import 'dart:convert';
+import 'dart:ui';
 
 import 'package:boimteric_app_getx/core/server/serves.dart';
 import 'package:boimteric_app_getx/core/theme/app_colors.dart';
@@ -152,7 +153,15 @@ class HomeScreenControllerImpl extends HomeScreenController
   void onInit() {
     getUserData();
     // Load saved theme preference
-    isDarkMode = myServices.sharedPreferences.getBool('theme') ?? false;
+    // If null (system default), determine based on current platform brightness
+    final themeValue = myServices.sharedPreferences.getBool('theme');
+    if (themeValue != null) {
+      isDarkMode = themeValue;
+    } else {
+      // System default - check current platform brightness
+      final platformBrightness = PlatformDispatcher.instance.platformBrightness;
+      isDarkMode = platformBrightness == Brightness.dark;
+    }
     animationController = AnimationController(
       duration: const Duration(milliseconds: 200),
       upperBound: 1,

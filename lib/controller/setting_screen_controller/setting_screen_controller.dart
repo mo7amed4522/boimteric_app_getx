@@ -28,7 +28,7 @@ class SettingScreenControllerImpl extends SettingScreenController {
 
   @override
   void logout() async {
-    await myServices.sharedPreferences.clear();
+    await myServices.sharedPreferences.remove('userdata');
     Get.offAllNamed(AppRouter.loginScreen);
     update();
   }

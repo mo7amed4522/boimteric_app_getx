@@ -35,6 +35,7 @@ class LoginScreenControllerImpl extends LoginScreenController {
     passwordController = TextEditingController();
 
     String? savedBaseUrl = myServices.sharedPreferences.getString('baseUrl');
+    debugPrint("savedBaseUrl is $savedBaseUrl");
     if (savedBaseUrl != null) {
       baseUrlController.text = savedBaseUrl;
     }

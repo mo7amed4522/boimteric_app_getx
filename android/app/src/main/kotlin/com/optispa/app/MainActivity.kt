@@ -1,4 +1,4 @@
-package com.example.boimteric_app_getx
+package com.optispa.app
 
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
@@ -12,7 +12,7 @@ import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 
 class MainActivity : FlutterFragmentActivity() {
-    private val CHANNEL = "com.example.boimteric_app_getx/location"
+    private val CHANNEL = "com.optispa.app/location"
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)

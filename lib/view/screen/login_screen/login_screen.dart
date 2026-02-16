@@ -41,8 +41,8 @@ class LoginScreen extends StatelessWidget {
                               SizedBox(height: 9.h),
                               CustomTextFormField(
                                 mycontroller: controller.baseUrlController,
-                                hintText: "Enter your base url".tr,
-                                label: "Base URL".tr,
+                                hintText: "enter_your_base_url".tr,
+                                label: "base_url".tr,
                                 prefixIcon: Icon(CupertinoIcons.link),
                                 textInputType: TextInputType.text,
                                 validator: (val) {
@@ -52,8 +52,8 @@ class LoginScreen extends StatelessWidget {
                               SizedBox(height: 2.h),
                               CustomTextFormField(
                                 mycontroller: controller.emailController,
-                                hintText: "Enter your username".tr,
-                                label: "Username".tr,
+                                hintText: "enter_your_username".tr,
+                                label: "username".tr,
                                 prefixIcon: Icon(CupertinoIcons.envelope_fill),
                                 textInputType: TextInputType.text,
                                 validator: (val) {
@@ -63,7 +63,7 @@ class LoginScreen extends StatelessWidget {
                               SizedBox(height: 2.h),
                               CustomTextFormField(
                                 mycontroller: controller.passwordController,
-                                hintText: "Enter your password".tr,
+                                hintText: "enter_your_password".tr,
                                 label: "password".tr,
                                 prefixIcon: Icon(CupertinoIcons.lock_fill),
                                 suffixIcon: controller.iconDate,
@@ -77,7 +77,7 @@ class LoginScreen extends StatelessWidget {
                               SizedBox(height: 2.h),
                               Spacer(),
                               ButtonLoginWidget(
-                                buttonName: 'Login to my account'.tr,
+                                buttonName: 'login_to_your_account'.tr,
                                 ontap: () {
                                   if (formState.currentState!.validate()) {
                                     controller.saveBaseUrl(

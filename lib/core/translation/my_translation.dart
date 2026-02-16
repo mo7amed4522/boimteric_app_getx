@@ -4,13 +4,13 @@ class MyTranslation implements Translations {
   @override
   Map<String, Map<String, String>> get keys => {
     "ar": {
-      'start': 'مرحبا بك في My Dresses',
       'settings': 'الإعدادات',
       'customize_your_app_experience': 'تخصيص تجربة التطبيق',
       'language': 'اللغة',
       'app_language': 'لغة التطبيق',
       'select_your_preferred_language': 'اختر لغتك المفضلة',
       'account': 'الحساب',
+      'you_can_check_out_now': 'يمكنك تسجيل الخروج الآن',
       'session_management': 'إدارة الجلسة',
       'sign_out': 'تسجيل الخروج',
       'securely_sign_out_of_your_account': 'تسجيل الخروج الآمن من حسابك',
@@ -60,9 +60,15 @@ class MyTranslation implements Translations {
       "dark_mode": "الوضع الداكن",
       "home_screen": "الصفحة الرئيسية",
       "setting_screen": "إعدادات التطبيق",
+      "enter_your_base_url": "أدخل URL خادمك",
+      "base_url": "URL خادمك",
+      "enter_your_username": "أدخل اسم المستخدم",
+      "username": "اسم المستخدم",
+      "enter_your_password": "أدخل كلمة المرور",
+      "password": "كلمة المرور",
+      "login_to_your_account": "تسجيل الدخول إلى حسابك",
     },
     "en": {
-      'start': 'Welcome to the My Dresses',
       'settings': 'Settings',
       'customize_your_app_experience': 'Customize your app experience',
       'language': 'Language',
@@ -118,6 +124,13 @@ class MyTranslation implements Translations {
       "dark_mode": "Dark Mode",
       "home_screen": "Home Screen",
       "setting_screen": "Settings Screen",
+      "enter_your_base_url": "Enter Your Base URL",
+      "base_url": "Base URL",
+      "enter_your_username": "Enter Your Username",
+      "username": "Username",
+      "enter_your_password": "Enter Your Password",
+      "password": "Password",
+      "login_to_your_account": "Login to Your Account",
     },
   };
 }
