@@ -26,27 +26,35 @@ class Crud {
 
   Future<dynamic> postRequest(String url, Map data) async {
     try {
+      debugPrint("Request URL: $url");
+      debugPrint("Request Body: ${jsonEncode(data)}");
+
       var response = await http.post(
         Uri.parse(url),
         headers: {"Content-Type": "application/json"},
         body: jsonEncode(data),
       );
-      debugPrint("Response: ${response.statusCode}");
+      debugPrint("Response Status: ${response.statusCode}");
       debugPrint("Response Body: ${response.body}");
+
       if (response.statusCode == 200) {
         var responsory = jsonDecode(response.body);
         return responsory;
       } else {
-        if (kDebugMode) {
-          print("Error ${response.statusCode}");
+        debugPrint("Error Status Code: ${response.statusCode}");
+        try {
+          return jsonDecode(response.body);
+        } catch (e) {
+          return {
+            "success": false,
+            "error": "Server error: ${response.statusCode}",
+          };
         }
-        return jsonDecode(response.body);
       }
-    } catch (e) {
-      if (kDebugMode) {
-        print("Error Catch $e");
-      }
-      return {"success": false, "error": e.toString()};
+    } catch (e, stackTrace) {
+      debugPrint("Error Catch: $e");
+      debugPrint("Stack Trace: $stackTrace");
+      return {"success": false, "error": "Network error: ${e.toString()}"};
     }
   }
 }

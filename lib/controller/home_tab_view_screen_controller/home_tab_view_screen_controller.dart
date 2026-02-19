@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_final_fields, strict_top_level_inference
+// ignore_for_file: unnecessary_brace_in_string_interps, prefer_final_fields, strict_top_level_inference
 
 import 'dart:async';
 import 'dart:convert';
@@ -409,13 +409,14 @@ class HomeTabViewScreenControllerImp extends HomeTabViewScreenController {
     final sharedPrefValue = _myServices.sharedPreferences.getBool(
       AttendanceConfig.isCheckedInKey,
     );
-
+    debugPrint('Loaded isCheckedIn from SharedPreferences: $sharedPrefValue');
     if (sharedPrefValue != null) {
       // Use value from SharedPreferences if it exists
       _isCheckedIn = sharedPrefValue;
     } else {
       // Fall back to LoginModel if no value in SharedPreferences
       _isCheckedIn = _loginModel?.isCheckedIn ?? false;
+      debugPrint('Loaded isCheckedIn from LoginModel: ${_isCheckedIn}');
     }
   }
 
@@ -811,6 +812,7 @@ class HomeTabViewScreenControllerImp extends HomeTabViewScreenController {
           AttendanceConfig.isCheckedInKey,
           false,
         );
+        
 
         Get.snackbar(
           'Success',

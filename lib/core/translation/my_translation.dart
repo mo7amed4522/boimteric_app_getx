@@ -84,6 +84,7 @@ class MyTranslation implements Translations {
       'developer': 'Developer',
       'status': 'Status',
       'production': 'Production',
+      'you_are_currently_checked_in':"you are currently checked in",
       'confirm_sign_out': 'Confirm Sign Out',
       'are_you_sure_you_want_to_sign_out':
           'Are you sure you want to sign out? You will need to log in again to use the app.',
