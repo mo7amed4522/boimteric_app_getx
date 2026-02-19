@@ -20,8 +20,8 @@
 -dontwarn com.google.android.play.core.tasks.Task
 
 # Keep all model classes for JSON serialization
--keep class com.optiaSpa.app.model.** { *; }
--keep class com.optiaSpa.app.** { *; }
+-keep class com.optispa.app.model.** { *; }
+-keep class com.optispa.app.** { *; }
 
 # Keep all classes in the lib packages (your Dart models when compiled)
 -keep class **.model.** { *; }

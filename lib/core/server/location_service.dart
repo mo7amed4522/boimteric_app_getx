@@ -19,7 +19,7 @@ import 'package:permission_handler/permission_handler.dart';
 /// - Mock location detection and prevention
 class LocationService {
   static const MethodChannel _platformChannel = MethodChannel(
-    'com.optiaSpa.app/location',
+    'com.optispa.app/location',
   );
 
   // Configuration for mock detection
